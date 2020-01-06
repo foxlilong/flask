@@ -7,6 +7,8 @@ verify_ssl = true
 
 [packages]
 flask-login = "*"
+bootstrap = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.7"

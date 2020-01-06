@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block content %}
-    login page
-<form action="" method="post">
+{% block app_content %}
+<div class="container">
+<form action="" method="post" class="form-signin">
     {{ form.hidden_tag() }}
     <p>
         {{ form.username.label }} <br>
@@ -18,9 +18,11 @@
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
     </p>
-    <p>{{ form.remember_me.label }} {{ form.remember_me }}</p>
+    <p>{{ form.remember_me.label }} {{ form.remember_me }}
+    </p>
     <p>{{ form.submit }}</p>
     <a href="{{ url_for('register')}}">注册新用户</a>
-
 </form>
+</div>
+
 {% endblock %}

@@ -1,5 +1,44 @@
 {% extends "base.html" %}
 
-{% block content %}
-    index page
+{% block app_content %}
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>username</th>
+                        <th>balance</th>
+                        <th>is_overdue</th>
+                        <th>remark</th>
+                    </tr>
+                    </thead>
+                    {% for d in data %}
+                    <tbody>
+                    <tr>
+                        {% if  d.is_overdue  %}
+                        <th scope="row">1</th>
+                        <td><font color="red">{{ d.username }}</font></td>
+                        <td><font color="red">{{ d.balance }}</font></td>
+                        <td><font color="red">{{ d.is_overdue }}</font></td>
+                        <td><font color="red">{{ d.remark }}</font></td>
+                        {% else %}
+                        <th scope="row">1</th>
+                        <td>{{ d.username }}</td>
+                        <td>{{ d.balance }}</td>
+                        <td>{{ d.is_overdue }}</td>
+                        <td>{{ d.remark }}</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
