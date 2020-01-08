@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "C:\\Users\\oliver\\.virtualenvs\\flask-BR_mkUqT\\Scripts\\python.exe",
+    "files.exclude": {
+        "**/*.pyc": {"when": "$(basename).py"}, 
+        "**/__pycache__": true,
+    }
+}
